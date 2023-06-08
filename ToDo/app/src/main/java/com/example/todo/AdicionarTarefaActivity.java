@@ -10,7 +10,7 @@ import android.widget.EditText;
 
 public class AdicionarTarefaActivity extends AppCompatActivity {
 
-    EditText inputTituto;
+    EditText inputTitulo;
     EditText inputDescricao;
     Button buttonAddTarefa;
 
@@ -25,7 +25,7 @@ public class AdicionarTarefaActivity extends AppCompatActivity {
         );
 
 
-        inputTituto = findViewById(R.id.inputTituloTarefa);
+        inputTitulo = findViewById(R.id.inputTituloTarefa);
         inputDescricao = findViewById(R.id.inputDescTarefa);
         buttonAddTarefa = findViewById(R.id.buttonAdicionarTarefa);
         
