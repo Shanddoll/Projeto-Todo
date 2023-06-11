@@ -10,31 +10,33 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="600dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0">
+        app:layout_constraintTop_toBottomOf="@+id/buttonMenuAdicionar">
 
         <LinearLayout
-            android:id="@+id/scrollviewLinearLayout"
+            android:id="@+id/scrollViewLinearLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:divider="@drawable/espaco_entre_cards"
             android:orientation="vertical"
-            android:showDividers="middle"
-            android:divider="@drawable/espaco_entre_cards"/>
+            android:showDividers="middle" />
     </ScrollView>
 
     <Button
         android:id="@+id/buttonMenuAdicionar"
         android:layout_width="wrap_content"
         android:layout_height="60dp"
-        android:layout_marginTop="48dp"
+        android:onClick="irParaAdicionarTarefa"
         android:text="@string/add_tarefa"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.052" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
