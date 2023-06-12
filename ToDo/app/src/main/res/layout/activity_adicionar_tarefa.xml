@@ -6,6 +6,51 @@
     android:layout_height="match_parent"
     tools:context=".AdicionarTarefaActivity">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/mainToolbar2"
+        android:layout_width="413dp"
+        android:layout_height="68dp"
+        android:background="@color/teal_700"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tollbarTextView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:text="Adicionar Tarefa"
+        android:textColor="#FAFAFA"
+        android:textSize="38sp"
+        app:layout_constraintBottom_toBottomOf="@+id/mainToolbar2"
+        app:layout_constraintEnd_toEndOf="@+id/mainToolbar2"
+        app:layout_constraintHorizontal_bias="0.64"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/mainToolbar2" />
+
+    <Button
+        android:id="@+id/buttonMenuVoltar"
+        android:layout_width="72dp"
+        android:layout_height="68dp"
+        android:layout_marginRight="8dp"
+        android:backgroundTint="@color/teal_400"
+        app:flow_horizontalAlign="center"
+        app:flow_verticalAlign="center"
+        app:icon="?attr/actionModeCloseDrawable"
+        app:iconSize="40dp"
+        app:iconTint="#FFFFFF"
+        app:iconTintMode="multiply"
+        app:layout_constraintBottom_toBottomOf="@+id/mainToolbar2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.02"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
     <EditText
         android:id="@+id/inputTituloTarefa"
         android:layout_width="wrap_content"
@@ -15,10 +60,10 @@
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.3"/>
+        app:layout_constraintVertical_bias="0.306" />
 
     <EditText
         android:id="@+id/inputDescTarefa"
@@ -31,6 +76,7 @@
         android:inputType="textMultiLine"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/inputTituloTarefa"
         app:layout_constraintVertical_bias="0.0" />
@@ -38,12 +84,12 @@
     <Button
         android:id="@+id/buttonAdicionarTarefa"
         android:layout_width="wrap_content"
-        android:layout_height="52dp"
+        android:layout_height="62dp"
         android:layout_marginTop="64dp"
+        android:backgroundTint="@color/teal_400"
         android:text="Adicionar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/inputDescTarefa"
         app:layout_constraintVertical_bias="0.0" />

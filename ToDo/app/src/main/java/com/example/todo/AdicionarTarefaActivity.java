@@ -17,6 +17,7 @@ public class AdicionarTarefaActivity extends AppCompatActivity {
     EditText inputTitulo;
     EditText inputDescricao;
     Button buttonAddTarefa;
+    Button buttonMenuVoltar;
     String titulo;
     String descricao;
 
@@ -35,6 +36,7 @@ public class AdicionarTarefaActivity extends AppCompatActivity {
         inputTitulo = findViewById(R.id.inputTituloTarefa);
         inputDescricao = findViewById(R.id.inputDescTarefa);
         buttonAddTarefa = findViewById(R.id.buttonAdicionarTarefa);
+        buttonMenuVoltar = findViewById(R.id.buttonMenuVoltar);
 
 
         buttonAddTarefa.setOnClickListener(new View.OnClickListener() {
@@ -44,6 +46,14 @@ public class AdicionarTarefaActivity extends AppCompatActivity {
                 setInputValues();
                 inserirTarefa(titulo, descricao);
 
+                startActivity(telaMainActivity);
+            }
+        });
+
+        buttonMenuVoltar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent telaMainActivity = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(telaMainActivity);
             }
         });

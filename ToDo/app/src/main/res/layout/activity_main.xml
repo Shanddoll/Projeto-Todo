@@ -7,15 +7,63 @@
     tools:context=".MainActivity">
 
 
-    <ScrollView
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/mainToolbar"
         android:layout_width="match_parent"
-        android:layout_height="600dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="68dp"
+        android:background="@color/teal_700"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tollbarTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="monospace"
+        android:text="@string/titulo"
+        android:textColor="#FAFAFA"
+        android:textSize="38sp"
+        app:layout_constraintBottom_toBottomOf="@+id/mainToolbar"
+        app:layout_constraintEnd_toEndOf="@+id/mainToolbar"
+        app:layout_constraintHorizontal_bias="0.049"
+        app:layout_constraintStart_toStartOf="@+id/mainToolbar"
+        app:layout_constraintTop_toTopOf="@+id/mainToolbar" />
+
+    <Button
+        android:id="@+id/buttonMenuAdicionar"
+        android:layout_width="72dp"
+        android:layout_height="68dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="@color/teal_400"
+        android:onClick="irParaAdicionarTarefa"
+        app:flow_horizontalAlign="center"
+        app:flow_verticalAlign="center"
+        app:icon="@android:drawable/ic_menu_add"
+        app:iconSize="40dp"
+        app:iconTint="#FFFFFF"
+        app:iconTintMode="multiply"
+        app:layout_constraintBottom_toBottomOf="@+id/mainToolbar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonMenuAdicionar">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="663dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mainToolbar"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="SpeakableTextPresentCheck">
 
         <LinearLayout
             android:id="@+id/scrollViewLinearLayout"
@@ -26,17 +74,16 @@
             android:showDividers="middle" />
     </ScrollView>
 
-    <Button
-        android:id="@+id/buttonMenuAdicionar"
+    <TextView
+        android:id="@+id/vazioTextView"
         android:layout_width="wrap_content"
-        android:layout_height="60dp"
-        android:onClick="irParaAdicionarTarefa"
-        android:text="@string/add_tarefa"
+        android:layout_height="wrap_content"
+        android:text="@string/vazio_textview"
+        android:textColor="#95434343"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.052" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

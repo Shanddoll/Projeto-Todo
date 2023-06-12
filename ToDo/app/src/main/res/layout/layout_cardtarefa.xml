@@ -5,8 +5,7 @@
     android:id="@+id/cardTarefa"
     android:layout_width="match_parent"
     android:layout_height="110dp"
-    android:background="@color/cardview_shadow_start_color"
-    >
+    android:background="#1D434343">
 
 
     <TextView
@@ -36,8 +35,12 @@
         android:id="@+id/buttonTarefaOk"
         android:layout_width="54dp"
         android:layout_height="55dp"
-        android:onClick="teste"
+        android:backgroundTint="@color/teal_400"
         android:text="OK"
+        app:icon="@android:drawable/ic_menu_delete"
+        app:iconSize="20dp"
+        app:iconTint="@color/teal_400"
+        app:iconTintMode="add"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.044"

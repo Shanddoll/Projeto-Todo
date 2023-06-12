@@ -1,7 +1,5 @@
 package com.example.todo;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.database.Cursor;
@@ -13,9 +11,10 @@ import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -25,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
     private SQLiteDatabase db;
     Cursor cursor;
     Button buttonMenuAddTarefa;
+    TextView vazioTextView;
 
 
     @Override
@@ -39,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         buttonMenuAddTarefa = findViewById(R.id.buttonMenuAdicionar);
+        vazioTextView = findViewById(R.id.vazioTextView);
 
 
         criarIniciarBanco();
@@ -46,6 +47,13 @@ public class MainActivity extends AppCompatActivity {
         ArrayList<List<String>> listaDadosConsulta = getValoresBanco();
         fecharBanco();
         popularScrollView(listaDadosConsulta);
+
+        // Mostra um texto caso não exista nenhuma tarefa:
+        if (listaDadosConsulta.size() == 0) {
+            vazioTextView.setVisibility(View.VISIBLE);
+        } else {
+            vazioTextView.setVisibility(View.INVISIBLE);
+        }
     }
 
     public void irParaAdicionarTarefa (View view) {
@@ -78,9 +86,7 @@ public class MainActivity extends AppCompatActivity {
                     cursor.getString(cursor.getColumnIndex("titulo")),
                     cursor.getString(cursor.getColumnIndex("descricao"))
             ));
-            //listaDeDados.add(cursor.getString(cursor.getColumnIndex("id")));
-            //listaDeDados.add(cursor.getString(cursor.getColumnIndex("titulo")));
-            //listaDeDados.add(cursor.getString(cursor.getColumnIndex("descricao")));
+
             cursor.moveToNext();
         }
         return listaDeDados;
